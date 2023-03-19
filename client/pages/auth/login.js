@@ -14,6 +14,7 @@ import { useEffect } from "react";
 export default function Login() {
   const route = useRouter();
   const [user, loading] = useAuthState(auth);
+
   //Sign in with google
   const googleProvider = new GoogleAuthProvider();
   const GoogleLogin = async () => {
@@ -41,6 +42,7 @@ export default function Login() {
       console.log(error);
     }
   };
+  
   useEffect(() => {
     if (user) {
       route.push("/dashboard");
