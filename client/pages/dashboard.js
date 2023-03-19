@@ -11,7 +11,7 @@ export default function Dashboard() {
   if (user){
     console.log("User: ", user.displayName)
     console.log("UserId: ",user.uid)
-    // console.log("AccessToken: ",user.accessToken)
+    console.log("AccessToken: ",user.accessToken)
     CourseAPI.verifyJWT(user.accessToken).then(res => console.log("Data: ",res.data) )
     return (
       <div>
