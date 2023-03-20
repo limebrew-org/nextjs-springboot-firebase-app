@@ -1,0 +1,21 @@
+version: "3.1"
+services:
+  api:
+    #? Set container name
+    container_name: course_app_service
+    image: course_app_image
+
+    #? build image
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    #? Environment
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: "/app/service-account.json"
+      GCLOUD_PROJECT_ID: "course-app-da5fb"
+      GCLOUD_FIRESTORE_DB_URL: "https://course-app-da5fb.firebaseio.com"
+
+    #? Ports
+    ports:
+      - 8080:8080
