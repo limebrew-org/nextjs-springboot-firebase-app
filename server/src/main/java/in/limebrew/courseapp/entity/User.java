@@ -13,9 +13,9 @@ public class User {
     @DocumentId
     public String id;
 
-    public String user_id;
-
     public String name;
 
     public String email;
+
+    public String bio;
 }

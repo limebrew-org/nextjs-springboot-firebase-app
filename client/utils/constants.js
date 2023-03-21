@@ -1,0 +1,2 @@
+export const COURSE_APP_SERVICE_URL =
+	process.env.NEXT_PUBLIC_COURSE_APP_SERVICE_URL
