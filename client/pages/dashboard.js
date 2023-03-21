@@ -20,9 +20,9 @@ export default function Dashboard() {
 		console.log("AccessToken: ", user.accessToken)
 
 		//? Call Course Service to verifyJWT
-		// CourseService.verifyUser(user.accessToken)
-		// 	.then((res) => console.log("Data: ", res.data))
-		// 	.catch((error) => console.log("Error: ", error))
+		CourseService.verifyUser(user.accessToken)
+		 	.then((res) => console.log("Data: ", res.data))
+		 	.catch((error) => console.log("Error: ", error))
 
 		return (
 			<div>

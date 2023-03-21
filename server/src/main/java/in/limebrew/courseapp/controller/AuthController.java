@@ -44,10 +44,12 @@ public class AuthController {
             //? Find user by userId in Firestore
             DocumentSnapshot userFoundEntity = userService.getUserById(user.getId());
             System.out.println("Get User By Id response: ");
-            System.out.println(userFoundEntity);
+            System.out.println(userFoundEntity.getData());
+
 
             //? If not then add user in firestore
 //            userService.createUser(user);
+
             return new ResponseEntity<>("Authenticated", HttpStatus.OK);
         }
         catch (FirebaseAuthException | ExecutionException | InterruptedException e) {
